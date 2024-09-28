@@ -1,5 +1,5 @@
 import 'package:actor/core/helpers/enums/media_type.dart';
-import 'package:actor/feature/images/data/model/imges_mixen.dart';
+import 'package:actor/feature/images/data/model/imges_model.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'movie_model.dart';
@@ -8,10 +8,11 @@ import 'tv_model.dart';
 // part 'media_model.g.dart';
 
 // @HiveType(typeId: 1)
-abstract class MediaModel extends HiveObject with ImgesMixen {
+abstract class MediaModel extends ImgesModel {
   @HiveField(1)
   @JsonKey(name: "id")
-  final int id;
+  @override
+  int id;
 
   @HiveField(2)
   @JsonKey(name: "title")

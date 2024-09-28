@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:actor/feature/images/data/model/imges_mixen.dart';
+import 'package:actor/core/network/api_path_enum.dart';
+import 'package:actor/feature/images/data/model/imges_model.dart';
 import 'package:hive/hive.dart';
 import 'package:json_annotation/json_annotation.dart';
 
@@ -24,6 +25,9 @@ class TVModel extends MediaModel {
   @HiveField(7)
   @JsonKey(name: "number_of_seasons")
   final int? numberOfSeasons;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: true)
+  ApiPath apiPath = ApiPath.tv;
 
   TVModel({
     required super.id,
@@ -40,7 +44,7 @@ class TVModel extends MediaModel {
       _$TVModelFromJson(json);
   @override
   Map<String, dynamic> toJson() => _$TVModelToJson(this);
-
+@override
   TVModel copyWith({
     int? id,
     String? name,
@@ -62,6 +66,6 @@ class TVModel extends MediaModel {
   }
 
   @override
-  ImgesMixen copyImage({required List<String> imgList}) =>
+  ImgesModel copyImage({required List<String> imgList}) =>
       copyWith()..imgesList = imgList;
 }

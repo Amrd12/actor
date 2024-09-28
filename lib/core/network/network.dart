@@ -1,6 +1,5 @@
 import 'package:actor/core/network/api_constanse.dart';
 import 'package:actor/core/network/api_path_enum.dart';
-import 'package:actor/feature/people/data/model/person_model.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 part 'network.g.dart';
@@ -8,7 +7,7 @@ part 'network.g.dart';
 @RestApi(baseUrl: ApiConstanse.baseUrl)
 abstract class RestClient {
   factory RestClient(Dio dio, {String? baseUrl}) = _RestClient;
-
+  
   @GET('/person/popular')
   Future<Map<String, dynamic>> getPersons(
     // @Query("api_key") String apikey,

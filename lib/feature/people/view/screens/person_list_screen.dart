@@ -1,5 +1,5 @@
 import 'package:actor/core/widgets/custom_img.dart';
-import 'package:actor/feature/people/cubit/people_cubit.dart';
+import 'package:actor/feature/people/cubit/person_cubit.dart';
 import 'package:actor/feature/people/data/model/person_model.dart';
 import 'package:actor/feature/people/view/widgets/person_widget.dart';
 import 'package:flutter/material.dart';
@@ -16,17 +16,17 @@ class _PersonListScreenState extends State<PersonListScreen> {
   late List<PersonModel> personList;
   @override
   void initState() {
-    BlocProvider.of<PeopleCubit>(context).getPopular();
+    BlocProvider.of<PersonCubit>(context).getPopular();
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<PeopleCubit, PeopleState>(
+    return BlocBuilder<PersonCubit, PersonState>(
       builder: (context, state) {
-        if (state is LoadingPeopleState) {
+        if (state is LoadingPersonState) {
           return const Center(child: CircularProgressIndicator());
-        } else if (state is PopularSuccessPeopleState) {
+        } else if (state is PopularSuccessPersonState) {
           personList = state.model;
           return GridView.builder(
             itemCount: personList.length,
@@ -41,7 +41,7 @@ class _PersonListScreenState extends State<PersonListScreen> {
               childAspectRatio: 2 / 3,
             ),
           );
-        } else if (state is ErrorPeopleState) {
+        } else if (state is ErrorPersonState) {
           return Text("Error ${state.error}");
         }
         return Text(" null");

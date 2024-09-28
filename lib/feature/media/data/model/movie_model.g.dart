@@ -66,11 +66,12 @@ MovieModel _$MovieModelFromJson(Map<String, dynamic> json) => MovieModel(
       name: json['title'] as String,
       image: json['poster_path'] as String,
       overview: json['overview'] as String,
-      mediaType: $enumDecode(_$MediaTypeEnumMap, json['media_type']), 
+      mediaType: $enumDecode(_$MediaTypeEnumMap, json['media_type']),
       releaseDate: json['release_date'] as String,
     )..imgesList = json['profile'] == null
         ? []
         : imgList(json['profile'] as Map<String, dynamic>);
+// ..apiPath = $enumDecode(_$ApiPathEnumMap, json['apiPath']);
 
 Map<String, dynamic> _$MovieModelToJson(MovieModel instance) =>
     <String, dynamic>{
@@ -81,9 +82,16 @@ Map<String, dynamic> _$MovieModelToJson(MovieModel instance) =>
       'overview': instance.overview,
       'media_type': _$MediaTypeEnumMap[instance.mediaType]!,
       'release_date': instance.releaseDate,
+      'apiPath': _$ApiPathEnumMap[instance.apiPath]!,
     };
 
 const _$MediaTypeEnumMap = {
   MediaType.movie: 'movie',
   MediaType.tv: 'tv',
+};
+
+const _$ApiPathEnumMap = {
+  ApiPath.tv: 'tv',
+  ApiPath.movie: 'movie',
+  ApiPath.person: 'person',
 };

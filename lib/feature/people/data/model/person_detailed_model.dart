@@ -1,4 +1,5 @@
-import 'package:actor/feature/images/data/model/imges_mixen.dart';
+import 'package:actor/core/network/api_path_enum.dart';
+import 'package:actor/feature/images/data/model/imges_model.dart';
 import 'package:actor/feature/people/data/model/person_model.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:json_annotation/json_annotation.dart';
@@ -125,7 +126,6 @@ class PersonDetailedModel extends PersonModel {
   }
 
   @override
-  ImgesMixen copyImage({required List<String> imgList}) =>
+  ImgesModel copyImage({required List<String> imgList}) =>
       copyWith()..imgesList = imgList;
-      
 }

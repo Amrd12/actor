@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'people_cubit.dart';
+part of 'person_cubit.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$PeopleState {
+mixin _$PersonState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
@@ -47,51 +47,51 @@ mixin _$PeopleState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(ErrorPeopleState value) error,
-    required TResult Function(LoadingPeopleState value) loading,
-    required TResult Function(SuccessPeopleState value) success,
-    required TResult Function(PopularSuccessPeopleState value) popularSuccess,
+    required TResult Function(ErrorPersonState value) error,
+    required TResult Function(LoadingPersonState value) loading,
+    required TResult Function(SuccessPersonState value) success,
+    required TResult Function(PopularSuccessPersonState value) popularSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(ErrorPeopleState value)? error,
-    TResult? Function(LoadingPeopleState value)? loading,
-    TResult? Function(SuccessPeopleState value)? success,
-    TResult? Function(PopularSuccessPeopleState value)? popularSuccess,
+    TResult? Function(ErrorPersonState value)? error,
+    TResult? Function(LoadingPersonState value)? loading,
+    TResult? Function(SuccessPersonState value)? success,
+    TResult? Function(PopularSuccessPersonState value)? popularSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(ErrorPeopleState value)? error,
-    TResult Function(LoadingPeopleState value)? loading,
-    TResult Function(SuccessPeopleState value)? success,
-    TResult Function(PopularSuccessPeopleState value)? popularSuccess,
+    TResult Function(ErrorPersonState value)? error,
+    TResult Function(LoadingPersonState value)? loading,
+    TResult Function(SuccessPersonState value)? success,
+    TResult Function(PopularSuccessPersonState value)? popularSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $PeopleStateCopyWith<$Res> {
-  factory $PeopleStateCopyWith(
-          PeopleState value, $Res Function(PeopleState) then) =
-      _$PeopleStateCopyWithImpl<$Res, PeopleState>;
+abstract class $PersonStateCopyWith<$Res> {
+  factory $PersonStateCopyWith(
+          PersonState value, $Res Function(PersonState) then) =
+      _$PersonStateCopyWithImpl<$Res, PersonState>;
 }
 
 /// @nodoc
-class _$PeopleStateCopyWithImpl<$Res, $Val extends PeopleState>
-    implements $PeopleStateCopyWith<$Res> {
-  _$PeopleStateCopyWithImpl(this._value, this._then);
+class _$PersonStateCopyWithImpl<$Res, $Val extends PersonState>
+    implements $PersonStateCopyWith<$Res> {
+  _$PersonStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of PeopleState
+  /// Create a copy of PersonState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -104,13 +104,13 @@ abstract class _$$InitialImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$InitialImplCopyWithImpl<$Res>
-    extends _$PeopleStateCopyWithImpl<$Res, _$InitialImpl>
+    extends _$PersonStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of PeopleState
+  /// Create a copy of PersonState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -121,7 +121,7 @@ class _$InitialImpl implements _Initial {
 
   @override
   String toString() {
-    return 'PeopleState.initial()';
+    return 'PersonState.initial()';
   }
 
   @override
@@ -177,10 +177,10 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(ErrorPeopleState value) error,
-    required TResult Function(LoadingPeopleState value) loading,
-    required TResult Function(SuccessPeopleState value) success,
-    required TResult Function(PopularSuccessPeopleState value) popularSuccess,
+    required TResult Function(ErrorPersonState value) error,
+    required TResult Function(LoadingPersonState value) loading,
+    required TResult Function(SuccessPersonState value) success,
+    required TResult Function(PopularSuccessPersonState value) popularSuccess,
   }) {
     return initial(this);
   }
@@ -189,10 +189,10 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(ErrorPeopleState value)? error,
-    TResult? Function(LoadingPeopleState value)? loading,
-    TResult? Function(SuccessPeopleState value)? success,
-    TResult? Function(PopularSuccessPeopleState value)? popularSuccess,
+    TResult? Function(ErrorPersonState value)? error,
+    TResult? Function(LoadingPersonState value)? loading,
+    TResult? Function(SuccessPersonState value)? success,
+    TResult? Function(PopularSuccessPersonState value)? popularSuccess,
   }) {
     return initial?.call(this);
   }
@@ -201,10 +201,10 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(ErrorPeopleState value)? error,
-    TResult Function(LoadingPeopleState value)? loading,
-    TResult Function(SuccessPeopleState value)? success,
-    TResult Function(PopularSuccessPeopleState value)? popularSuccess,
+    TResult Function(ErrorPersonState value)? error,
+    TResult Function(LoadingPersonState value)? loading,
+    TResult Function(SuccessPersonState value)? success,
+    TResult Function(PopularSuccessPersonState value)? popularSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -214,35 +214,35 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements PeopleState {
+abstract class _Initial implements PersonState {
   const factory _Initial() = _$InitialImpl;
 }
 
 /// @nodoc
-abstract class _$$ErrorPeopleStateImplCopyWith<$Res> {
-  factory _$$ErrorPeopleStateImplCopyWith(_$ErrorPeopleStateImpl value,
-          $Res Function(_$ErrorPeopleStateImpl) then) =
-      __$$ErrorPeopleStateImplCopyWithImpl<$Res>;
+abstract class _$$ErrorPersonStateImplCopyWith<$Res> {
+  factory _$$ErrorPersonStateImplCopyWith(_$ErrorPersonStateImpl value,
+          $Res Function(_$ErrorPersonStateImpl) then) =
+      __$$ErrorPersonStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String error});
 }
 
 /// @nodoc
-class __$$ErrorPeopleStateImplCopyWithImpl<$Res>
-    extends _$PeopleStateCopyWithImpl<$Res, _$ErrorPeopleStateImpl>
-    implements _$$ErrorPeopleStateImplCopyWith<$Res> {
-  __$$ErrorPeopleStateImplCopyWithImpl(_$ErrorPeopleStateImpl _value,
-      $Res Function(_$ErrorPeopleStateImpl) _then)
+class __$$ErrorPersonStateImplCopyWithImpl<$Res>
+    extends _$PersonStateCopyWithImpl<$Res, _$ErrorPersonStateImpl>
+    implements _$$ErrorPersonStateImplCopyWith<$Res> {
+  __$$ErrorPersonStateImplCopyWithImpl(_$ErrorPersonStateImpl _value,
+      $Res Function(_$ErrorPersonStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of PeopleState
+  /// Create a copy of PersonState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? error = null,
   }) {
-    return _then(_$ErrorPeopleStateImpl(
+    return _then(_$ErrorPersonStateImpl(
       error: null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -253,35 +253,35 @@ class __$$ErrorPeopleStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErrorPeopleStateImpl implements ErrorPeopleState {
-  const _$ErrorPeopleStateImpl({required this.error});
+class _$ErrorPersonStateImpl implements ErrorPersonState {
+  const _$ErrorPersonStateImpl({required this.error});
 
   @override
   final String error;
 
   @override
   String toString() {
-    return 'PeopleState.error(error: $error)';
+    return 'PersonState.error(error: $error)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ErrorPeopleStateImpl &&
+            other is _$ErrorPersonStateImpl &&
             (identical(other.error, error) || other.error == error));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of PeopleState
+  /// Create a copy of PersonState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ErrorPeopleStateImplCopyWith<_$ErrorPeopleStateImpl> get copyWith =>
-      __$$ErrorPeopleStateImplCopyWithImpl<_$ErrorPeopleStateImpl>(
+  _$$ErrorPersonStateImplCopyWith<_$ErrorPersonStateImpl> get copyWith =>
+      __$$ErrorPersonStateImplCopyWithImpl<_$ErrorPersonStateImpl>(
           this, _$identity);
 
   @override
@@ -328,10 +328,10 @@ class _$ErrorPeopleStateImpl implements ErrorPeopleState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(ErrorPeopleState value) error,
-    required TResult Function(LoadingPeopleState value) loading,
-    required TResult Function(SuccessPeopleState value) success,
-    required TResult Function(PopularSuccessPeopleState value) popularSuccess,
+    required TResult Function(ErrorPersonState value) error,
+    required TResult Function(LoadingPersonState value) loading,
+    required TResult Function(SuccessPersonState value) success,
+    required TResult Function(PopularSuccessPersonState value) popularSuccess,
   }) {
     return error(this);
   }
@@ -340,10 +340,10 @@ class _$ErrorPeopleStateImpl implements ErrorPeopleState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(ErrorPeopleState value)? error,
-    TResult? Function(LoadingPeopleState value)? loading,
-    TResult? Function(SuccessPeopleState value)? success,
-    TResult? Function(PopularSuccessPeopleState value)? popularSuccess,
+    TResult? Function(ErrorPersonState value)? error,
+    TResult? Function(LoadingPersonState value)? loading,
+    TResult? Function(SuccessPersonState value)? success,
+    TResult? Function(PopularSuccessPersonState value)? popularSuccess,
   }) {
     return error?.call(this);
   }
@@ -352,10 +352,10 @@ class _$ErrorPeopleStateImpl implements ErrorPeopleState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(ErrorPeopleState value)? error,
-    TResult Function(LoadingPeopleState value)? loading,
-    TResult Function(SuccessPeopleState value)? success,
-    TResult Function(PopularSuccessPeopleState value)? popularSuccess,
+    TResult Function(ErrorPersonState value)? error,
+    TResult Function(LoadingPersonState value)? loading,
+    TResult Function(SuccessPersonState value)? success,
+    TResult Function(PopularSuccessPersonState value)? popularSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -365,52 +365,52 @@ class _$ErrorPeopleStateImpl implements ErrorPeopleState {
   }
 }
 
-abstract class ErrorPeopleState implements PeopleState {
-  const factory ErrorPeopleState({required final String error}) =
-      _$ErrorPeopleStateImpl;
+abstract class ErrorPersonState implements PersonState {
+  const factory ErrorPersonState({required final String error}) =
+      _$ErrorPersonStateImpl;
 
   String get error;
 
-  /// Create a copy of PeopleState
+  /// Create a copy of PersonState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ErrorPeopleStateImplCopyWith<_$ErrorPeopleStateImpl> get copyWith =>
+  _$$ErrorPersonStateImplCopyWith<_$ErrorPersonStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$LoadingPeopleStateImplCopyWith<$Res> {
-  factory _$$LoadingPeopleStateImplCopyWith(_$LoadingPeopleStateImpl value,
-          $Res Function(_$LoadingPeopleStateImpl) then) =
-      __$$LoadingPeopleStateImplCopyWithImpl<$Res>;
+abstract class _$$LoadingPersonStateImplCopyWith<$Res> {
+  factory _$$LoadingPersonStateImplCopyWith(_$LoadingPersonStateImpl value,
+          $Res Function(_$LoadingPersonStateImpl) then) =
+      __$$LoadingPersonStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadingPeopleStateImplCopyWithImpl<$Res>
-    extends _$PeopleStateCopyWithImpl<$Res, _$LoadingPeopleStateImpl>
-    implements _$$LoadingPeopleStateImplCopyWith<$Res> {
-  __$$LoadingPeopleStateImplCopyWithImpl(_$LoadingPeopleStateImpl _value,
-      $Res Function(_$LoadingPeopleStateImpl) _then)
+class __$$LoadingPersonStateImplCopyWithImpl<$Res>
+    extends _$PersonStateCopyWithImpl<$Res, _$LoadingPersonStateImpl>
+    implements _$$LoadingPersonStateImplCopyWith<$Res> {
+  __$$LoadingPersonStateImplCopyWithImpl(_$LoadingPersonStateImpl _value,
+      $Res Function(_$LoadingPersonStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of PeopleState
+  /// Create a copy of PersonState
   /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 
-class _$LoadingPeopleStateImpl implements LoadingPeopleState {
-  const _$LoadingPeopleStateImpl();
+class _$LoadingPersonStateImpl implements LoadingPersonState {
+  const _$LoadingPersonStateImpl();
 
   @override
   String toString() {
-    return 'PeopleState.loading()';
+    return 'PersonState.loading()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingPeopleStateImpl);
+        (other.runtimeType == runtimeType && other is _$LoadingPersonStateImpl);
   }
 
   @override
@@ -460,10 +460,10 @@ class _$LoadingPeopleStateImpl implements LoadingPeopleState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(ErrorPeopleState value) error,
-    required TResult Function(LoadingPeopleState value) loading,
-    required TResult Function(SuccessPeopleState value) success,
-    required TResult Function(PopularSuccessPeopleState value) popularSuccess,
+    required TResult Function(ErrorPersonState value) error,
+    required TResult Function(LoadingPersonState value) loading,
+    required TResult Function(SuccessPersonState value) success,
+    required TResult Function(PopularSuccessPersonState value) popularSuccess,
   }) {
     return loading(this);
   }
@@ -472,10 +472,10 @@ class _$LoadingPeopleStateImpl implements LoadingPeopleState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(ErrorPeopleState value)? error,
-    TResult? Function(LoadingPeopleState value)? loading,
-    TResult? Function(SuccessPeopleState value)? success,
-    TResult? Function(PopularSuccessPeopleState value)? popularSuccess,
+    TResult? Function(ErrorPersonState value)? error,
+    TResult? Function(LoadingPersonState value)? loading,
+    TResult? Function(SuccessPersonState value)? success,
+    TResult? Function(PopularSuccessPersonState value)? popularSuccess,
   }) {
     return loading?.call(this);
   }
@@ -484,10 +484,10 @@ class _$LoadingPeopleStateImpl implements LoadingPeopleState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(ErrorPeopleState value)? error,
-    TResult Function(LoadingPeopleState value)? loading,
-    TResult Function(SuccessPeopleState value)? success,
-    TResult Function(PopularSuccessPeopleState value)? popularSuccess,
+    TResult Function(ErrorPersonState value)? error,
+    TResult Function(LoadingPersonState value)? loading,
+    TResult Function(SuccessPersonState value)? success,
+    TResult Function(PopularSuccessPersonState value)? popularSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -497,35 +497,35 @@ class _$LoadingPeopleStateImpl implements LoadingPeopleState {
   }
 }
 
-abstract class LoadingPeopleState implements PeopleState {
-  const factory LoadingPeopleState() = _$LoadingPeopleStateImpl;
+abstract class LoadingPersonState implements PersonState {
+  const factory LoadingPersonState() = _$LoadingPersonStateImpl;
 }
 
 /// @nodoc
-abstract class _$$SuccessPeopleStateImplCopyWith<$Res> {
-  factory _$$SuccessPeopleStateImplCopyWith(_$SuccessPeopleStateImpl value,
-          $Res Function(_$SuccessPeopleStateImpl) then) =
-      __$$SuccessPeopleStateImplCopyWithImpl<$Res>;
+abstract class _$$SuccessPersonStateImplCopyWith<$Res> {
+  factory _$$SuccessPersonStateImplCopyWith(_$SuccessPersonStateImpl value,
+          $Res Function(_$SuccessPersonStateImpl) then) =
+      __$$SuccessPersonStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({PersonModel model});
 }
 
 /// @nodoc
-class __$$SuccessPeopleStateImplCopyWithImpl<$Res>
-    extends _$PeopleStateCopyWithImpl<$Res, _$SuccessPeopleStateImpl>
-    implements _$$SuccessPeopleStateImplCopyWith<$Res> {
-  __$$SuccessPeopleStateImplCopyWithImpl(_$SuccessPeopleStateImpl _value,
-      $Res Function(_$SuccessPeopleStateImpl) _then)
+class __$$SuccessPersonStateImplCopyWithImpl<$Res>
+    extends _$PersonStateCopyWithImpl<$Res, _$SuccessPersonStateImpl>
+    implements _$$SuccessPersonStateImplCopyWith<$Res> {
+  __$$SuccessPersonStateImplCopyWithImpl(_$SuccessPersonStateImpl _value,
+      $Res Function(_$SuccessPersonStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of PeopleState
+  /// Create a copy of PersonState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? model = null,
   }) {
-    return _then(_$SuccessPeopleStateImpl(
+    return _then(_$SuccessPersonStateImpl(
       model: null == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -536,35 +536,35 @@ class __$$SuccessPeopleStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SuccessPeopleStateImpl implements SuccessPeopleState {
-  const _$SuccessPeopleStateImpl({required this.model});
+class _$SuccessPersonStateImpl implements SuccessPersonState {
+  const _$SuccessPersonStateImpl({required this.model});
 
   @override
   final PersonModel model;
 
   @override
   String toString() {
-    return 'PeopleState.success(model: $model)';
+    return 'PersonState.success(model: $model)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SuccessPeopleStateImpl &&
+            other is _$SuccessPersonStateImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, model);
 
-  /// Create a copy of PeopleState
+  /// Create a copy of PersonState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$SuccessPeopleStateImplCopyWith<_$SuccessPeopleStateImpl> get copyWith =>
-      __$$SuccessPeopleStateImplCopyWithImpl<_$SuccessPeopleStateImpl>(
+  _$$SuccessPersonStateImplCopyWith<_$SuccessPersonStateImpl> get copyWith =>
+      __$$SuccessPersonStateImplCopyWithImpl<_$SuccessPersonStateImpl>(
           this, _$identity);
 
   @override
@@ -611,10 +611,10 @@ class _$SuccessPeopleStateImpl implements SuccessPeopleState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(ErrorPeopleState value) error,
-    required TResult Function(LoadingPeopleState value) loading,
-    required TResult Function(SuccessPeopleState value) success,
-    required TResult Function(PopularSuccessPeopleState value) popularSuccess,
+    required TResult Function(ErrorPersonState value) error,
+    required TResult Function(LoadingPersonState value) loading,
+    required TResult Function(SuccessPersonState value) success,
+    required TResult Function(PopularSuccessPersonState value) popularSuccess,
   }) {
     return success(this);
   }
@@ -623,10 +623,10 @@ class _$SuccessPeopleStateImpl implements SuccessPeopleState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(ErrorPeopleState value)? error,
-    TResult? Function(LoadingPeopleState value)? loading,
-    TResult? Function(SuccessPeopleState value)? success,
-    TResult? Function(PopularSuccessPeopleState value)? popularSuccess,
+    TResult? Function(ErrorPersonState value)? error,
+    TResult? Function(LoadingPersonState value)? loading,
+    TResult? Function(SuccessPersonState value)? success,
+    TResult? Function(PopularSuccessPersonState value)? popularSuccess,
   }) {
     return success?.call(this);
   }
@@ -635,10 +635,10 @@ class _$SuccessPeopleStateImpl implements SuccessPeopleState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(ErrorPeopleState value)? error,
-    TResult Function(LoadingPeopleState value)? loading,
-    TResult Function(SuccessPeopleState value)? success,
-    TResult Function(PopularSuccessPeopleState value)? popularSuccess,
+    TResult Function(ErrorPersonState value)? error,
+    TResult Function(LoadingPersonState value)? loading,
+    TResult Function(SuccessPersonState value)? success,
+    TResult Function(PopularSuccessPersonState value)? popularSuccess,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -648,46 +648,46 @@ class _$SuccessPeopleStateImpl implements SuccessPeopleState {
   }
 }
 
-abstract class SuccessPeopleState implements PeopleState {
-  const factory SuccessPeopleState({required final PersonModel model}) =
-      _$SuccessPeopleStateImpl;
+abstract class SuccessPersonState implements PersonState {
+  const factory SuccessPersonState({required final PersonModel model}) =
+      _$SuccessPersonStateImpl;
 
   PersonModel get model;
 
-  /// Create a copy of PeopleState
+  /// Create a copy of PersonState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SuccessPeopleStateImplCopyWith<_$SuccessPeopleStateImpl> get copyWith =>
+  _$$SuccessPersonStateImplCopyWith<_$SuccessPersonStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$PopularSuccessPeopleStateImplCopyWith<$Res> {
-  factory _$$PopularSuccessPeopleStateImplCopyWith(
-          _$PopularSuccessPeopleStateImpl value,
-          $Res Function(_$PopularSuccessPeopleStateImpl) then) =
-      __$$PopularSuccessPeopleStateImplCopyWithImpl<$Res>;
+abstract class _$$PopularSuccessPersonStateImplCopyWith<$Res> {
+  factory _$$PopularSuccessPersonStateImplCopyWith(
+          _$PopularSuccessPersonStateImpl value,
+          $Res Function(_$PopularSuccessPersonStateImpl) then) =
+      __$$PopularSuccessPersonStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<PersonModel> model});
 }
 
 /// @nodoc
-class __$$PopularSuccessPeopleStateImplCopyWithImpl<$Res>
-    extends _$PeopleStateCopyWithImpl<$Res, _$PopularSuccessPeopleStateImpl>
-    implements _$$PopularSuccessPeopleStateImplCopyWith<$Res> {
-  __$$PopularSuccessPeopleStateImplCopyWithImpl(
-      _$PopularSuccessPeopleStateImpl _value,
-      $Res Function(_$PopularSuccessPeopleStateImpl) _then)
+class __$$PopularSuccessPersonStateImplCopyWithImpl<$Res>
+    extends _$PersonStateCopyWithImpl<$Res, _$PopularSuccessPersonStateImpl>
+    implements _$$PopularSuccessPersonStateImplCopyWith<$Res> {
+  __$$PopularSuccessPersonStateImplCopyWithImpl(
+      _$PopularSuccessPersonStateImpl _value,
+      $Res Function(_$PopularSuccessPersonStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of PeopleState
+  /// Create a copy of PersonState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? model = null,
   }) {
-    return _then(_$PopularSuccessPeopleStateImpl(
+    return _then(_$PopularSuccessPersonStateImpl(
       model: null == model
           ? _value._model
           : model // ignore: cast_nullable_to_non_nullable
@@ -698,8 +698,8 @@ class __$$PopularSuccessPeopleStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$PopularSuccessPeopleStateImpl implements PopularSuccessPeopleState {
-  const _$PopularSuccessPeopleStateImpl(
+class _$PopularSuccessPersonStateImpl implements PopularSuccessPersonState {
+  const _$PopularSuccessPersonStateImpl(
       {required final List<PersonModel> model})
       : _model = model;
 
@@ -713,14 +713,14 @@ class _$PopularSuccessPeopleStateImpl implements PopularSuccessPeopleState {
 
   @override
   String toString() {
-    return 'PeopleState.popularSuccess(model: $model)';
+    return 'PersonState.popularSuccess(model: $model)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PopularSuccessPeopleStateImpl &&
+            other is _$PopularSuccessPersonStateImpl &&
             const DeepCollectionEquality().equals(other._model, _model));
   }
 
@@ -728,14 +728,14 @@ class _$PopularSuccessPeopleStateImpl implements PopularSuccessPeopleState {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_model));
 
-  /// Create a copy of PeopleState
+  /// Create a copy of PersonState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$PopularSuccessPeopleStateImplCopyWith<_$PopularSuccessPeopleStateImpl>
-      get copyWith => __$$PopularSuccessPeopleStateImplCopyWithImpl<
-          _$PopularSuccessPeopleStateImpl>(this, _$identity);
+  _$$PopularSuccessPersonStateImplCopyWith<_$PopularSuccessPersonStateImpl>
+      get copyWith => __$$PopularSuccessPersonStateImplCopyWithImpl<
+          _$PopularSuccessPersonStateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -781,10 +781,10 @@ class _$PopularSuccessPeopleStateImpl implements PopularSuccessPeopleState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(ErrorPeopleState value) error,
-    required TResult Function(LoadingPeopleState value) loading,
-    required TResult Function(SuccessPeopleState value) success,
-    required TResult Function(PopularSuccessPeopleState value) popularSuccess,
+    required TResult Function(ErrorPersonState value) error,
+    required TResult Function(LoadingPersonState value) loading,
+    required TResult Function(SuccessPersonState value) success,
+    required TResult Function(PopularSuccessPersonState value) popularSuccess,
   }) {
     return popularSuccess(this);
   }
@@ -793,10 +793,10 @@ class _$PopularSuccessPeopleStateImpl implements PopularSuccessPeopleState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(ErrorPeopleState value)? error,
-    TResult? Function(LoadingPeopleState value)? loading,
-    TResult? Function(SuccessPeopleState value)? success,
-    TResult? Function(PopularSuccessPeopleState value)? popularSuccess,
+    TResult? Function(ErrorPersonState value)? error,
+    TResult? Function(LoadingPersonState value)? loading,
+    TResult? Function(SuccessPersonState value)? success,
+    TResult? Function(PopularSuccessPersonState value)? popularSuccess,
   }) {
     return popularSuccess?.call(this);
   }
@@ -805,10 +805,10 @@ class _$PopularSuccessPeopleStateImpl implements PopularSuccessPeopleState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(ErrorPeopleState value)? error,
-    TResult Function(LoadingPeopleState value)? loading,
-    TResult Function(SuccessPeopleState value)? success,
-    TResult Function(PopularSuccessPeopleState value)? popularSuccess,
+    TResult Function(ErrorPersonState value)? error,
+    TResult Function(LoadingPersonState value)? loading,
+    TResult Function(SuccessPersonState value)? success,
+    TResult Function(PopularSuccessPersonState value)? popularSuccess,
     required TResult orElse(),
   }) {
     if (popularSuccess != null) {
@@ -818,16 +818,16 @@ class _$PopularSuccessPeopleStateImpl implements PopularSuccessPeopleState {
   }
 }
 
-abstract class PopularSuccessPeopleState implements PeopleState {
-  const factory PopularSuccessPeopleState(
+abstract class PopularSuccessPersonState implements PersonState {
+  const factory PopularSuccessPersonState(
           {required final List<PersonModel> model}) =
-      _$PopularSuccessPeopleStateImpl;
+      _$PopularSuccessPersonStateImpl;
 
   List<PersonModel> get model;
 
-  /// Create a copy of PeopleState
+  /// Create a copy of PersonState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PopularSuccessPeopleStateImplCopyWith<_$PopularSuccessPeopleStateImpl>
+  _$$PopularSuccessPersonStateImplCopyWith<_$PopularSuccessPersonStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

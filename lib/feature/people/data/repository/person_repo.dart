@@ -5,9 +5,9 @@ import 'package:actor/feature/people/data/model/person_detailed_model.dart';
 import 'package:actor/feature/people/data/model/person_model.dart';
 import 'package:either_dart/either.dart';
 
-class PeopleRepo {
+class PersonRepo {
   final RestClient _client;
-  PeopleRepo(this._client);
+  PersonRepo(this._client);
 
   List<PersonModel> parsePersonList(List<dynamic> js) =>
       List<PersonModel>.from(js
@@ -34,5 +34,4 @@ class PeopleRepo {
       return Left(ErrorModel(e.toString()));
     }
   }
-  
 }

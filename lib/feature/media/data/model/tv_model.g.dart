@@ -75,6 +75,7 @@ TVModel _$TVModelFromJson(Map<String, dynamic> json) => TVModel(
     )..imgesList = json['profile'] == null
         ? []
         : imgList(json['profile'] as Map<String, dynamic>);
+// ..apiPath = $enumDecode(_$ApiPathEnumMap, json['apiPath']);
 
 Map<String, dynamic> _$TVModelToJson(TVModel instance) => <String, dynamic>{
       'profile': instance.imgesList,
@@ -85,9 +86,16 @@ Map<String, dynamic> _$TVModelToJson(TVModel instance) => <String, dynamic>{
       'name': instance.name,
       'first_air_date': instance.firstAirDate,
       'number_of_seasons': instance.numberOfSeasons,
+      'apiPath': _$ApiPathEnumMap[instance.apiPath]!,
     };
 
 const _$MediaTypeEnumMap = {
   MediaType.movie: 'movie',
   MediaType.tv: 'tv',
+};
+
+const _$ApiPathEnumMap = {
+  ApiPath.tv: 'tv',
+  ApiPath.movie: 'movie',
+  ApiPath.person: 'person',
 };

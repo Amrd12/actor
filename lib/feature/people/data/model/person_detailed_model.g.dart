@@ -102,15 +102,18 @@ PersonDetailedModel _$PersonDetailedModelFromJson(Map<String, dynamic> json) =>
           ?.map((e) => e as String)
           .toList(),
       imdbId: json['imdb_id'] as String?,
-    )..imgesList = json['profile'] == null
-        ? []
-        : imgList(json['profile'] as Map<String, dynamic>);
+    )
+      ..imgesList = json['profile'] == null
+          ? []
+          : imgList(json['profile'] as Map<String, dynamic>)
+      ..apiPath = $enumDecode(_$ApiPathEnumMap, json['apiPath']);
 
 Map<String, dynamic> _$PersonDetailedModelToJson(
         PersonDetailedModel instance) =>
     <String, dynamic>{
       'profile': instance.imgesList,
       'adult': instance.adult,
+      'apiPath': _$ApiPathEnumMap[instance.apiPath]!,
       'gender': _$GenderEnumMap[instance.gender]!,
       'id': instance.id,
       'name': instance.name,
@@ -130,4 +133,10 @@ const _$GenderEnumMap = {
   Gender.female: 1,
   Gender.male: 2,
   Gender.nonbinary: 3,
+};
+
+const _$ApiPathEnumMap = {
+  ApiPath.tv: 'tv',
+  ApiPath.movie: 'movie',
+  ApiPath.person: 'person',
 };

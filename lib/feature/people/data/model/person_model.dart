@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:actor/feature/images/data/model/imges_mixen.dart';
+import 'package:actor/core/network/api_path_enum.dart';
+import 'package:actor/feature/images/data/model/imges_model.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:json_annotation/json_annotation.dart';
 
@@ -10,15 +11,20 @@ part 'person_model.g.dart';
 
 @JsonSerializable(explicitToJson: true)
 @HiveType(typeId: 0)
-class PersonModel extends HiveObject with ImgesMixen {
+class PersonModel extends ImgesModel {
   @HiveField(1)
   final bool adult;
+
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: true)
+  ApiPath apiPath = ApiPath.person; 
 
   @HiveField(2)
   final Gender gender;
 
   @HiveField(3)
-  final int id;
+  @override
+  int id;
 
   @HiveField(4)
   final String name;
@@ -35,14 +41,15 @@ class PersonModel extends HiveObject with ImgesMixen {
   @JsonKey(name: "known_for", defaultValue: [])
   final List<MediaModel> media;
 
-  PersonModel(
-      {required this.adult,
-      required this.gender,
-      required this.id,
-      required this.name,
-      required this.image,
-      required this.media,
-      required this.originalName});
+  PersonModel({
+    required this.adult,
+    required this.gender,
+    required this.id,
+    required this.name,
+    required this.image,
+    required this.media,
+    required this.originalName,
+  });
 
   // Factory for deserialization
   factory PersonModel.fromJson(Map<String, dynamic> json) =>
@@ -62,7 +69,6 @@ class PersonModel extends HiveObject with ImgesMixen {
     int? id,
     String? name,
     String? image,
-    String? biography,
     List<MediaModel>? media,
     String? originalName,
   }) {
@@ -78,6 +84,6 @@ class PersonModel extends HiveObject with ImgesMixen {
   }
 
   @override
-  ImgesMixen copyImage({required List<String> imgList}) =>
+  ImgesModel copyImage({required List<String> imgList}) =>
       copyWith()..imgesList = imgList;
 }

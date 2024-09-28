@@ -33,7 +33,13 @@ A new Flutter project.
         -data
         -Imges
         -known for
-
+# model flow
+    -image model
+        -person model
+            -detailed person model
+        -media model
+            -tv
+            -movie
 # Features
     -Popular Persons
         -Get All popular
