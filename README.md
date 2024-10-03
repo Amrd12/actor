@@ -26,14 +26,14 @@ A new Flutter project.
                 -screens/widgets
 
 # Models    
-    -Media model
-        -Tv
-        -Movie
-    -Person
-        -data
-        -Imges
-        -known for
-# model flow
+    -Image model
+        -Media model
+            -Tv model
+            -Movie  model
+        -Person
+           -Person Detailed Model
+           
+# model inheritance flow
     -image model
         -person model
             -detailed person model
@@ -41,13 +41,10 @@ A new Flutter project.
             -tv
             -movie
 # Features
+    -images
     -Popular Persons
-        -Get All popular
-        -add to local
     -Media
-        -get media by id
     -search
-        -search
 
 # Hive Types
     0- persoon model

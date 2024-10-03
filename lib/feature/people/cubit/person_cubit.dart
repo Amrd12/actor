@@ -21,10 +21,11 @@ class PersonCubit extends Cubit<PersonState> {
 
   Future<void> getPopular() async {
     try {
-      emit(loading);
+      if (page == 1) emit(loading);
       final data = await _repo.getPopulorList(lan: lan, page: page);
       if (data.isRight) {
-        emit(popular = popular.copyWith(model: data.right));
+        final List<PersonModel> modellist = [...popular.model, ...data.right];
+        emit(popular = popular.copyWith(model: modellist));
       } else {
         emit(ErrorPersonState(error: data.left.message));
       }
@@ -35,6 +36,7 @@ class PersonCubit extends Cubit<PersonState> {
 
   Future<void> loadinfo(PersonModel model) async {
     try {
+      emit(loading);
       final data = await _repo.getPersonInfo(model, lan);
       if (data.isRight) {
         emit(SuccessPersonState(model: data.right));

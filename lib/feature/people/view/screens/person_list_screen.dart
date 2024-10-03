@@ -1,18 +1,19 @@
 import 'package:actor/core/widgets/custom_img.dart';
 import 'package:actor/feature/people/cubit/person_cubit.dart';
 import 'package:actor/feature/people/data/model/person_model.dart';
+import 'package:actor/feature/people/view/widgets/person_list_widget.dart';
 import 'package:actor/feature/people/view/widgets/person_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class PersonListScreen extends StatefulWidget {
-  const PersonListScreen({super.key});
+class PopularListScreen extends StatefulWidget {
+  const PopularListScreen({super.key});
 
   @override
-  State<PersonListScreen> createState() => _PersonListScreenState();
+  State<PopularListScreen> createState() => _PopularListScreenState();
 }
 
-class _PersonListScreenState extends State<PersonListScreen> {
+class _PopularListScreenState extends State<PopularListScreen> {
   late List<PersonModel> personList;
   @override
   void initState() {
@@ -28,23 +29,11 @@ class _PersonListScreenState extends State<PersonListScreen> {
           return const Center(child: CircularProgressIndicator());
         } else if (state is PopularSuccessPersonState) {
           personList = state.model;
-          return GridView.builder(
-            itemCount: personList.length,
-            itemBuilder: (context, index) {
-              final PersonModel model = personList[index];
-              return PersonWidget(
-                model: model,
-              );
-            },
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              childAspectRatio: 2 / 3,
-            ),
-          );
+          return PersonListWidget(personList: personList);
         } else if (state is ErrorPersonState) {
           return Text("Error ${state.error}");
         }
-        return Text(" null");
+        return const Text(" null");
       },
     );
   }

@@ -17,7 +17,7 @@ class MovieModel extends MediaModel {
   @JsonKey(name: "release_date")
   final String releaseDate;
   @override
-  @JsonKey(includeFromJson: true, includeToJson: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   ApiPath apiPath = ApiPath.movie;
   MovieModel({
     required super.id,

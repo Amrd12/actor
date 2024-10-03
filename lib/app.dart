@@ -15,7 +15,6 @@ class ActorApp extends StatefulWidget {
 }
 
 class _ActorAppState extends State<ActorApp> {
-  final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
   static const List<NavigationModel> navigationList = [
     NavigationModel(Icons.explore_outlined, Icons.explore, true,
@@ -27,7 +26,7 @@ class _ActorAppState extends State<ActorApp> {
       body: Stack(
         children: [
           Navigator(
-            key: navigatorKey,
+            key: AppRouter.navigatorKey,
             onGenerateRoute: AppRouter().generateRoute,
             onDidRemovePage: (page) {
               log(page.toString());

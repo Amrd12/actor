@@ -16,8 +16,8 @@ class PersonModel extends ImgesModel {
   final bool adult;
 
   @override
-  @JsonKey(includeFromJson: true, includeToJson: true)
-  ApiPath apiPath = ApiPath.person; 
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  ApiPath apiPath = ApiPath.person;
 
   @HiveField(2)
   final Gender gender;

@@ -1,5 +1,7 @@
 import 'package:actor/core/network/dio_factory.dart';
 import 'package:actor/core/network/network.dart';
+import 'package:actor/feature/images/cubit/images_cubit.dart';
+import 'package:actor/feature/images/data/repository/imges_repo.dart';
 import 'package:actor/feature/people/cubit/person_cubit.dart';
 import 'package:actor/feature/people/data/repository/person_repo.dart';
 import 'package:dio/dio.dart';
@@ -18,6 +20,8 @@ void setup() {
   //Media
 
   //image
+  getIt.registerFactory<ImagesCubit>(() => ImagesCubit(getIt()));
+  getIt.registerFactory<ImgesRepo>(() => ImgesRepo(getIt()));
 
   //home
 

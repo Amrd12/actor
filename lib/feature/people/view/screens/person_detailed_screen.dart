@@ -1,11 +1,10 @@
 import 'dart:developer';
 
 import 'package:actor/feature/people/cubit/person_cubit.dart';
+import 'package:actor/feature/people/data/model/person_detailed_model.dart';
 import 'package:actor/feature/people/data/model/person_model.dart';
 import 'package:actor/feature/people/view/widgets/person_Full_widget.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class PersonDetailedScreen extends StatefulWidget {
@@ -20,7 +19,7 @@ class _PersonDetailedScreenState extends State<PersonDetailedScreen> {
 
   @override
   void initState() {
-    if (model is PersonModel) {
+    if (model.runtimeType != PersonDetailedModel) {
       BlocProvider.of<PersonCubit>(context).loadinfo(model);
     }
     super.initState();
@@ -28,22 +27,24 @@ class _PersonDetailedScreenState extends State<PersonDetailedScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<PersonCubit, PersonState>(
-      builder: (context, state) {
-        if (state is SuccessPersonState) {
-          log(model.runtimeType.toString());
-          model = state.model;
-          return PersonFullWidget(
-            model: model,
-          );
-        } else if (state is LoadingPersonState) {
-          return Center(child: CircularProgressIndicator());
-        } else {
-          return Center(
-            child: Text("Error nothing"),
-          );
-        }
-      },
+    return Scaffold(
+      body: BlocBuilder<PersonCubit, PersonState>(
+        builder: (context, state) {
+          if (state is SuccessPersonState) {
+            log(model.runtimeType.toString());
+            model = state.model;
+            return PersonFullWidget(
+              model: model,
+            );
+          } else if (state is LoadingPersonState) {
+            return const Center(child: CircularProgressIndicator());
+          } else {
+            return const Center(
+              child: Text("Error nothing"),
+            );
+          }
+        },
+      ),
     );
   }
 }

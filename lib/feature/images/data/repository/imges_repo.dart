@@ -11,10 +11,10 @@ class ImgesRepo {
   Future<Either<ErrorModel, ImgesModel>> getImage(
       {required ImgesModel mix, required ApiPath path}) async {
     try {
-      final data = await _client.getImages(path, mix .id);
+      final data = await _client.getImages(path, mix.id);
       List<String> imgList =
           List.from((data["profiles"]! as List).map((e) => e["file_path"]));
-      return Right(mix.copyImage(imgList: imgList));
+      return Right(mix = mix.copyImage(imgList: imgList));
     } catch (e) {
       return Left(ErrorModel(e.toString()));
     }

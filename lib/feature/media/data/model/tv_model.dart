@@ -26,7 +26,7 @@ class TVModel extends MediaModel {
   @JsonKey(name: "number_of_seasons")
   final int? numberOfSeasons;
   @override
-  @JsonKey(includeFromJson: true, includeToJson: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   ApiPath apiPath = ApiPath.tv;
 
   TVModel({

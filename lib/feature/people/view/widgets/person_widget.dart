@@ -19,8 +19,8 @@ class PersonWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(4),
       child: InkWell(
-        onTap: () => Navigator.of(context)
-            .pushNamed(RouterConst.personPath, arguments: model),
+        onTap: () => AppRouter.appKey.currentState!
+            .pushNamed(RouterConst.personPath, arguments: {"model": model}),
         child: GridTile(
           footer: Container(
             color: MyColors.myYellow.withOpacity(.8),
