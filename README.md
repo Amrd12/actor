@@ -1,6 +1,8 @@
 # actor
 
 A new Flutter project.
+My First Clean Arch Project 
+Tring To achevie and deal with Clean Arch 
 
 
 #  App Structure
@@ -50,4 +52,7 @@ A new Flutter project.
     0- persoon model
     1- person detaieled model
     2- movie model
-    3-tv model
+    3-tv models
+
+
+I think this is Enough for this project .. cya on another Project
